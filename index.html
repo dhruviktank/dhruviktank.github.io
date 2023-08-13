@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="profile.jpg" type="image/x-icon" />
+    <script src="angular.min.js"></script>
+    <script src="route.min.js"></script>
+    <script src="module.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6198d5b73f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style1.css" />
+    <title>Welcome</title>
+  </head>
+  <body>
+    <section id="header">
+      <div class="nav-container">
+        <div class="logo-container">
+          <h1>
+            <span style="font-size: 22px; font-weight: 700">
+              <i class="fa-solid fa-square-full"></i>Dhruvik Tank</span
+            ><span
+              style="
+                font-size: 16px;
+                font-weight: lighter;
+                text-transform: uppercase;
+              "
+            >
+              / </span
+            ><span
+              style="
+                font-size: 16px;
+                font-weight: lighter;
+                text-transform: uppercase;
+              "
+            >
+              Web Developer</span
+            >
+          </h1>
+        </div>
+        <div id="menubar" class="menu-bar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="nav-bar" id="navbar">
+          <ul>
+            <li>
+              <a onclick="hide(0)" href="#/!" class="nav-link active"
+                >About me</a
+              >
+            </li>
+            <li>
+              <a onclick="hide(1)" href="#!Resume" class="nav-link">Resume</a>
+            </li>
+            <li><a onclick="hide(2)" href="" class="nav-link">Projects</a></li>
+            <li><a onclick="hide(3)" href="" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <div ng-view></div>
+    <section id="footer">
+      <div class="right-container">
+        <p>@ 2023 developed by <a href="">Dhruvik Tank</a></p>
+      </div>
+      <div class="left-container">
+        <div>
+          <p>Call</p>
+          <a href="tel:+919558811276">+91-95588 11276</a>
+        </div>
+        <div>
+          <p>Write</p>
+          <a href="mailto:tankdhruvik29@gmail.com">tankdhruvik29@gmail.com</a>
+        </div>
+        <div>
+          <p>Follow</p>
+          <div class="link-container">
+            <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      var menu = document.getElementById("menubar");
+      var navbar = document.getElementById("navbar");
+      var navlink = document.getElementsByClassName("nav-link");
+      menu.addEventListener("click", (e) => {
+        e.preventDefault;
+        if (menu.classList.contains("active")) {
+          menu.classList.remove("active");
+          navbar.classList.remove("active");
+          document.body.style.overflow = "scroll";
+        } else {
+          menu.classList.add("active");
+          navbar.classList.add("active");
+          document.body.style.overflow = "hidden";
+        }
+      });
+      function hide(n) {
+        for (var i = 0; i < navlink.length; i++) {
+          navlink[i].classList.remove("active");
+        }
+        navlink[n].classList.add("active");
+        menu.classList.remove("active");
+        navbar.classList.remove("active");
+        document.body.style.overflow = "scroll";
+      }
+    </script>
+  </body>
+</html>

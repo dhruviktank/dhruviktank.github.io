@@ -1,0 +1,115 @@
+#aboutbody{
+    width: 100%;
+    margin: auto;
+    padding-top: 30vh;
+    padding-bottom: 80px;
+    background: rgb(216, 242, 251);
+}
+h1{
+    text-align: center;
+}
+.experiance-container{
+    margin: 0 auto;
+    margin-top: 80px;
+    width: 650px; 
+}
+.exp-inner{
+    box-shadow: -5px 10px 10px 0px rgba(128, 128, 128, 0.433);
+    margin: 40px auto;
+    box-sizing: border-box;
+    padding: 50px;
+    height: 300px;
+    display: flex;
+    width: 100%;
+    background-color: white;
+}
+span{
+    font-size: 20px;
+    font-weight: 700;
+}
+button{
+    padding: 8px 15px;
+    background-color: rgb(31, 99, 235);
+    color: white;
+    font-weight: 600;
+    border-radius: 25px;
+    font-size: 14px;
+    border: 1px solid blue;
+
+}
+.exp-info-container{
+    margin-top: 20px;
+    width: 40%;
+}
+.exp-info-container p{
+    margin: 10px 0;
+    font-size: 16px;
+}
+.exp-text-container p{
+    font-size: 14px;
+    margin: 10px 0;
+    line-height: 20px;
+}
+.exp-text-container{
+    width: 60%;
+    align-self: flex-end;
+}
+.extra-info-container{
+    box-shadow: -5px 10px 10px 0px rgba(128, 128, 128, 0.433);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-template-columns: auto;
+    padding: 40px;
+    box-sizing: border-box;
+    margin: auto;
+    height: 400px;
+    background-color: white;
+    width: 650px;
+}
+.extra-info-container div{
+    display: grid; 
+    grid-template-columns: auto auto; 
+    gap: 15px 0px;
+}
+.extra-info-container p{
+    font-size: 14px;
+}
+.extra-info-container i{
+    color: blue;
+    font-size: 12px;
+    margin: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    #aboutbody{
+        padding-top: 10vh;
+    }
+    .experiance-container{
+        margin-top: 40px;
+        width: 95%; 
+        margin-right: 0;
+    }
+    .exp-inner{
+        display: block;
+        height: fit-content;
+        width: 100%;
+        padding: 30px;
+    }
+    .exp-info-container, .exp-text-container{
+        width: 100%;
+    }
+    .extra-info-container{
+        height: fit-content;
+        margin-right: 0;
+        width: 95%;
+        padding: 25px;
+    }
+    .extra-info-container div{
+        display: block;
+    }
+    .extra-info-container div p{
+        margin: 10px 0;
+
+    }
+}
